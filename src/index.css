@@ -4,31 +4,35 @@
 
 @layer base {
   body {
-    @apply font-sans bg-[#0b0f17] text-slate-200 antialiased;
+    @apply font-sans bg-[#120a10] text-[#f7f2f5] antialiased;
   }
 }
 
-/* Custom subtle scrollbar */
+/* Custom palette scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0f17;
+  background: #120a10;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #3d2429;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #734652;
 }
 
-/* Subtle glow effects */
-.glow-emerald {
-  box-shadow: 0 0 50px -12px rgba(16, 185, 129, 0.15);
+/* Atmospheric glow effects */
+.glow-mulberry {
+  box-shadow: 0 0 50px -10px rgba(191, 86, 112, 0.22);
+}
+
+.glow-bloom {
+  box-shadow: 0 0 50px -12px rgba(217, 176, 195, 0.18);
 }
 
 .glow-card {
@@ -37,6 +41,6 @@
 
 .glow-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(52, 211, 153, 0.35);
-  box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.12);
+  border-color: rgba(191, 86, 112, 0.45);
+  box-shadow: 0 14px 32px -10px rgba(191, 86, 112, 0.18);
 }

@@ -1,18 +1,18 @@
 import React from 'react';
-import { User, Code2, GraduationCap, Compass, CheckCircle } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
+import { User, CheckCircle, Palette } from 'lucide-react';
+import { personalInfo, brandPalette } from '../data/portfolioData';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 border-t border-slate-800/80 relative">
+    <section id="about" className="py-24 border-t border-ferra-800/80 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
           
           {/* Left Column: Bio & Story */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-emerald-400 font-semibold">
-              <User className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-bloom font-semibold">
+              <User className="w-3.5 h-3.5 text-mulberry" />
               <span>Background & Philosophy</span>
             </div>
 
@@ -20,7 +20,7 @@ export default function About() {
               Driven by curiosity, grounded in engineering craftsmanship.
             </h2>
 
-            <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+            <div className="space-y-4 text-cancan-200 text-sm sm:text-base leading-relaxed">
               <p>
                 I am a software engineer focused on building practical, high-impact systems. My journey spans full-stack web platforms, machine-learning computer vision pipelines, and localized digital tools.
               </p>
@@ -31,20 +31,20 @@ export default function About() {
 
             {/* Core Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-200">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-brandDark-900/70 border border-ferra-800 text-xs text-cancan-100">
+                <CheckCircle className="w-4 h-4 text-mulberry shrink-0" />
                 <span>Modern React & Component Design</span>
               </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-200">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-brandDark-900/70 border border-ferra-800 text-xs text-cancan-100">
+                <CheckCircle className="w-4 h-4 text-mulberry shrink-0" />
                 <span>Python & Computer Vision (MediaPipe)</span>
               </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-200">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-brandDark-900/70 border border-ferra-800 text-xs text-cancan-100">
+                <CheckCircle className="w-4 h-4 text-mulberry shrink-0" />
                 <span>REST API Engineering & Security</span>
               </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-200">
-                <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-brandDark-900/70 border border-ferra-800 text-xs text-cancan-100">
+                <CheckCircle className="w-4 h-4 text-mulberry shrink-0" />
                 <span>Docker & Automated Testing</span>
               </div>
             </div>
@@ -53,51 +53,51 @@ export default function About() {
 
           {/* Right Column: Highlights / Quick Facts Card */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-slate-900 border border-slate-800 p-7 space-y-6">
-              <div className="flex items-center gap-3 pb-5 border-b border-slate-800">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold font-mono">
+            <div className="rounded-2xl bg-brandDark-900 border border-ferra-800 p-7 space-y-6 shadow-xl">
+              <div className="flex items-center gap-3 pb-5 border-b border-ferra-800/80">
+                <div className="w-12 h-12 rounded-xl bg-ferra/40 border border-mulberry/40 flex items-center justify-center text-bloom font-bold font-mono text-lg">
                   LME
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-base">
                     {personalInfo.name}
                   </h3>
-                  <p className="text-xs font-mono text-emerald-400">
+                  <p className="text-xs font-mono text-bloom">
                     Software & AI Developer
                   </p>
                 </div>
               </div>
 
               <div className="space-y-4 text-xs font-mono">
-                <div className="flex justify-between py-1 border-b border-slate-800/60">
-                  <span className="text-slate-400">Location</span>
-                  <span className="text-slate-200 font-semibold">{personalInfo.location}</span>
+                <div className="flex justify-between py-1 border-b border-ferra-800/60">
+                  <span className="text-cancan/70">Location</span>
+                  <span className="text-cancan-100 font-semibold">{personalInfo.location}</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-slate-800/60">
-                  <span className="text-slate-400">GitHub</span>
+                <div className="flex justify-between py-1 border-b border-ferra-800/60">
+                  <span className="text-cancan/70">GitHub</span>
                   <a
                     href={personalInfo.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-emerald-400 hover:underline"
+                    className="text-bloom hover:text-white"
                   >
                     @{personalInfo.handle}
                   </a>
                 </div>
-                <div className="flex justify-between py-1 border-b border-slate-800/60">
-                  <span className="text-slate-400">Specialization</span>
-                  <span className="text-slate-200">Web & Computer Vision</span>
+                <div className="flex justify-between py-1 border-b border-ferra-800/60">
+                  <span className="text-cancan/70">Specialization</span>
+                  <span className="text-cancan-100">Web & Computer Vision</span>
                 </div>
                 <div className="flex justify-between py-1">
-                  <span className="text-slate-400">Work Status</span>
-                  <span className="text-emerald-300 font-semibold">Available for Hire</span>
+                  <span className="text-cancan/70">Work Status</span>
+                  <span className="text-bloom font-semibold">Available for Hire</span>
                 </div>
               </div>
 
               <div className="pt-2">
                 <a
                   href="#contact"
-                  className="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs flex items-center justify-center transition-colors shadow-sm"
+                  className="w-full py-3 rounded-xl bg-mulberry hover:bg-mulberry-400 text-white font-semibold text-xs flex items-center justify-center transition-colors shadow-md shadow-mulberry/30"
                 >
                   Start a Conversation
                 </a>
@@ -105,6 +105,42 @@ export default function About() {
             </div>
           </div>
 
+        </div>
+
+        {/* Brand Palette Showcase Strip */}
+        <div className="rounded-2xl bg-brandDark-900/60 border border-ferra-800/80 p-6 sm:p-8">
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-6 pb-4 border-b border-ferra-800/80">
+            <div className="flex items-center gap-2 text-xs font-mono text-bloom uppercase tracking-wider font-semibold">
+              <Palette className="w-4 h-4 text-mulberry" />
+              <span>Identity Design System • EPS Branding Palette</span>
+            </div>
+            <span className="text-[11px] font-mono text-cancan/60">epsbranding.com</span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+            {brandPalette.map((color) => (
+              <div
+                key={color.name}
+                className="rounded-xl p-3 bg-brandDark-950/70 border border-ferra-800/60 flex flex-col justify-between gap-3 group hover:border-mulberry/40 transition-colors"
+              >
+                <div
+                  className="w-full h-12 rounded-lg border border-white/10 shadow-inner"
+                  style={{ backgroundColor: color.hex }}
+                />
+                <div className="space-y-0.5">
+                  <div className="font-mono text-xs font-bold text-white group-hover:text-bloom transition-colors">
+                    {color.name}
+                  </div>
+                  <div className="font-mono text-[11px] text-cancan-200">
+                    {color.hex}
+                  </div>
+                  <div className="font-mono text-[10px] text-cancan/50">
+                    {color.pantone}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

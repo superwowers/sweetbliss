@@ -1,3 +1,11 @@
+export const brandPalette = [
+  { name: "FERRA", hex: "#734652", pantone: "PANTONE 4096 CP", role: "Deep Plum / Structural Anchor" },
+  { name: "MULBERRY", hex: "#BF5670", pantone: "PANTONE 7432 CP", role: "Vibrant Berry / Primary Accent" },
+  { name: "CAN CAN", hex: "#D9BBAF", pantone: "PANTONE 673 CP", role: "Warm Nude / Soft Contrast" },
+  { name: "BLOOM", hex: "#D9B0C3", pantone: "PANTONE 685 CP", role: "Blush Lilac / Atmospheric Glow" },
+  { name: "MAVERICK", hex: "#D9C5CE", pantone: "PANTONE 5175 CP", role: "Muted Mauve / Hairline & Metadata" }
+];
+
 export const personalInfo = {
   name: "Lauren Mae Espinar",
   handle: "superwowers",
