@@ -12,81 +12,29 @@ export default {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       colors: {
-        // EPS Brand Palette: Ferra, Mulberry, Can Can, Bloom, Maverick
-        ferra: {
-          DEFAULT: '#734652',
-          50: '#f8f4f5',
-          100: '#eedee2',
-          200: '#ddc1c8',
-          300: '#c59ea9',
-          400: '#a77685',
-          500: '#734652',
-          600: '#643944',
-          700: '#532e37',
-          800: '#46272e',
-          900: '#3d2429',
-          950: '#231116',
+        // The 5 Exact Brand Colors
+        ferra: '#734652',       // PANTONE 4096 CP - Deep Wine / Plum
+        mulberry: '#BF5670',    // PANTONE 7432 CP - Vibrant Berry Rose
+        cancan: '#D9BBAF',      // PANTONE 673 CP  - Warm Nude Terracotta
+        bloom: '#D9B0C3',       // PANTONE 685 CP  - Soft Orchid Blush
+        maverick: '#D9C5CE',    // PANTONE 5175 CP - Muted Lavender Mauve
+
+        // Theme Background & Surface Helpers derived strictly from the palette
+        themeDark: {
+          bg: '#2F171F',        // Deepest Ferra base
+          surface: '#43222C',   // Rich Ferra surface card
+          subtle: '#261219',    // Recessed Ferra panel
+          border: '#734652',    // Exact Ferra border
+          text: '#FDF7F5',      // High contrast crisp text
+          muted: '#D9C5CE',     // Maverick muted text
         },
-        mulberry: {
-          DEFAULT: '#BF5670',
-          50: '#fcf4f6',
-          100: '#faeaf0',
-          200: '#f5d6e1',
-          300: '#edb4c6',
-          400: '#e08ba4',
-          500: '#BF5670',
-          600: '#b0425e',
-          700: '#94334c',
-          800: '#7c2c40',
-          900: '#692938',
-          950: '#3e111d',
-        },
-        cancan: {
-          DEFAULT: '#D9BBAF',
-          50: '#fbf8f7',
-          100: '#f6efec',
-          200: '#ecded8',
-          300: '#dfc9c1',
-          400: '#D9BBAF',
-          500: '#c29b8c',
-          600: '#af8474',
-          700: '#926b5d',
-          800: '#77574c',
-          900: '#62483f',
-        },
-        bloom: {
-          DEFAULT: '#D9B0C3',
-          50: '#fbf7f9',
-          100: '#f6edf2',
-          200: '#eedce6',
-          300: '#e3c5d6',
-          400: '#D9B0C3',
-          500: '#be8ba5',
-          600: '#a6708b',
-          700: '#8c5972',
-          800: '#744a5e',
-          900: '#603f4f',
-        },
-        maverick: {
-          DEFAULT: '#D9C5CE',
-          50: '#faf7f9',
-          100: '#f5f0f3',
-          200: '#ece3e7',
-          300: '#dfd2d9',
-          400: '#D9C5CE',
-          500: '#bfa7b2',
-          600: '#a78c99',
-          700: '#8e7280',
-          800: '#755e69',
-          900: '#614e57',
-        },
-        brandDark: {
-          950: '#0e070c',
-          900: '#140b12',
-          850: '#1a0e18',
-          800: '#22131f',
-          700: '#2d1829',
-          border: '#3c2035',
+        themeLight: {
+          bg: '#F5E9E5',        // Warm Can Can parchment
+          surface: '#FAF3F1',   // Clean warm rose-white card
+          subtle: '#EDE0DC',    // Recessed Can Can panel
+          border: '#D9BBAF',    // Exact Can Can border
+          text: '#3A1E26',      // Deep Ferra ink text
+          muted: '#734652',     // Ferra body text
         }
       }
     },

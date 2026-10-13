@@ -4,35 +4,35 @@
 
 @layer base {
   body {
-    @apply font-sans bg-[#120a10] text-[#f7f2f5] antialiased;
+    @apply font-sans antialiased selection:bg-mulberry selection:text-white;
   }
 }
 
-/* Custom palette scrollbar */
+/* Palette custom scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #120a10;
+  background: #2F171F;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #F5E9E5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3d2429;
+  background: #734652;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #734652;
+  background: #BF5670;
 }
 
-/* Atmospheric glow effects */
+/* Atmospheric Glows */
 .glow-mulberry {
-  box-shadow: 0 0 50px -10px rgba(191, 86, 112, 0.22);
-}
-
-.glow-bloom {
-  box-shadow: 0 0 50px -12px rgba(217, 176, 195, 0.18);
+  box-shadow: 0 0 50px -10px rgba(191, 86, 112, 0.35);
 }
 
 .glow-card {
@@ -41,6 +41,6 @@
 
 .glow-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(191, 86, 112, 0.45);
-  box-shadow: 0 14px 32px -10px rgba(191, 86, 112, 0.18);
+  border-color: #BF5670 !important;
+  box-shadow: 0 14px 34px -8px rgba(191, 86, 112, 0.25);
 }

@@ -22,19 +22,19 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-24 border-t border-ferra-200 dark:border-ferra-800/80 bg-ferra-50/40 dark:bg-brandDark-950/50 relative">
+    <section id="skills" className="py-24 border-t border-[#D9BBAF] dark:border-[#734652] bg-[#EDE0DC]/40 dark:bg-[#261219]/60 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-mulberry dark:text-bloom font-semibold mb-2">
+          <div className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-[#BF5670] dark:text-[#D9B0C3] font-semibold mb-2">
             <Layers className="w-3.5 h-3.5" />
             <span>Technical Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ferra-950 dark:text-white mb-3">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3A1E26] dark:text-[#FDF7F5] mb-3">
             Core Stack & Tooling
           </h2>
-          <p className="text-ferra-700 dark:text-cancan/80 text-sm sm:text-base leading-relaxed">
+          <p className="text-[#734652] dark:text-[#D9C5CE] text-sm sm:text-base leading-relaxed">
             A battle-tested repertoire covering modern client-side reactive architectures, high-throughput microservices, and AI computer vision algorithms.
           </p>
         </div>
@@ -44,12 +44,12 @@ export default function Skills() {
           {skillCategories.map((category) => (
             <div
               key={category.name}
-              className="rounded-2xl bg-white dark:bg-brandDark-900/80 border border-ferra-200 dark:border-ferra-800/90 p-6 flex flex-col justify-between shadow-sm dark:shadow-none"
+              className="rounded-2xl bg-[#FAF3F1] dark:bg-[#43222C] border-2 border-[#D9BBAF] dark:border-[#734652] p-6 flex flex-col justify-between shadow-sm"
             >
               <div>
-                <div className="flex items-center gap-2 mb-6 pb-3 border-b border-ferra-200 dark:border-ferra-800/80">
-                  <div className="w-2.5 h-2.5 rounded-full bg-mulberry" />
-                  <h3 className="font-mono text-sm font-bold text-ferra-950 dark:text-white uppercase tracking-wider">
+                <div className="flex items-center gap-2 mb-6 pb-3 border-b border-[#D9BBAF] dark:border-[#734652]">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#BF5670]" />
+                  <h3 className="font-mono text-sm font-bold text-[#3A1E26] dark:text-[#FDF7F5] uppercase tracking-wider">
                     {category.name}
                   </h3>
                 </div>
@@ -58,12 +58,12 @@ export default function Skills() {
                   {category.skills.map((skill) => (
                     <div key={skill.name} className="space-y-1.5">
                       <div className="flex justify-between text-xs font-mono">
-                        <span className="text-ferra-800 dark:text-cancan-100">{skill.name}</span>
-                        <span className="text-mulberry dark:text-bloom font-semibold">{skill.level}%</span>
+                        <span className="text-[#3A1E26] dark:text-[#FDF7F5] font-medium">{skill.name}</span>
+                        <span className="text-[#BF5670] dark:text-[#D9B0C3] font-bold">{skill.level}%</span>
                       </div>
-                      <div className="w-full h-1.5 rounded-full bg-ferra-100 dark:bg-brandDark-950 overflow-hidden border border-ferra-200 dark:border-ferra-900/60">
+                      <div className="w-full h-2 rounded-full bg-[#EDE0DC] dark:bg-[#261219] overflow-hidden border border-[#D9BBAF]/60 dark:border-[#734652]">
                         <div
-                          className="h-full rounded-full bg-gradient-to-r from-mulberry via-bloom to-cancan transition-all duration-700"
+                          className="h-full rounded-full bg-gradient-to-r from-[#734652] via-[#BF5670] to-[#D9B0C3] transition-all duration-700"
                           style={{ width: `${skill.level}%` }}
                         />
                       </div>
@@ -82,16 +82,16 @@ export default function Skills() {
             return (
               <div
                 key={p.title}
-                className="p-6 rounded-2xl bg-white dark:bg-brandDark-900/50 border border-ferra-200 dark:border-ferra-800/70 flex items-start gap-4 shadow-sm dark:shadow-none"
+                className="p-6 rounded-2xl bg-[#FAF3F1] dark:bg-[#43222C] border-2 border-[#D9BBAF] dark:border-[#734652] flex items-start gap-4 shadow-sm"
               >
-                <div className="p-2.5 rounded-xl bg-ferra-100 dark:bg-ferra/30 border border-ferra-200 dark:border-ferra-600/50 text-mulberry shrink-0">
-                  <Icon className="w-5 h-5 text-mulberry" />
+                <div className="p-2.5 rounded-xl bg-[#BF5670]/15 dark:bg-[#BF5670]/30 border border-[#BF5670]/40 text-[#BF5670] shrink-0">
+                  <Icon className="w-5 h-5 text-[#BF5670]" />
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-ferra-950 dark:text-white mb-1">
+                  <h4 className="text-base font-bold text-[#3A1E26] dark:text-[#FDF7F5] mb-1">
                     {p.title}
                   </h4>
-                  <p className="text-xs text-ferra-700 dark:text-cancan/80 leading-relaxed">
+                  <p className="text-xs text-[#5C3340] dark:text-[#D9C5CE] leading-relaxed">
                     {p.desc}
                   </p>
                 </div>
