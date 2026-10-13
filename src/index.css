@@ -4,7 +4,12 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased selection:bg-mulberry selection:text-white;
+    @apply font-sans antialiased;
+  }
+
+  ::selection {
+    background-color: #BF5670;
+    color: #ffffff;
   }
 }
 
