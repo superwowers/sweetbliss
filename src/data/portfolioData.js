@@ -15,6 +15,7 @@ export const personalInfo = {
   location: "Philippines",
   github: "https://github.com/superwowers",
   email: "lrnmspnr@gmail.com",
+  avatar: "/profile.jpg",
 };
 
 export const projects = [

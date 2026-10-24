@@ -32,9 +32,11 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Brand / Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-lg bg-[#BF5670] text-white border border-[#D9B0C3]/60 flex items-center justify-center font-mono font-bold text-sm shadow-sm group-hover:scale-105 transition-all">
-            LME
-          </div>
+          <img
+            src={personalInfo.avatar}
+            alt={personalInfo.name}
+            className="w-9 h-9 rounded-lg object-cover object-[center_20%] border-2 border-[#BF5670] shadow-sm group-hover:scale-105 transition-all"
+          />
           <div className="flex flex-col">
             <span className="font-semibold text-sm tracking-tight text-[#3A1E26] dark:text-[#FDF7F5] group-hover:text-[#BF5670] dark:group-hover:text-[#D9B0C3] transition-colors">
               {personalInfo.name}
