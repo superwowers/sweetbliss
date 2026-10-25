@@ -8,16 +8,18 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-[#D9BBAF] dark:border-[#734652] py-10 bg-[#EDE0DC] dark:bg-[#261219] text-[#734652] dark:text-[#D9C5CE] text-xs font-mono transition-colors">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <footer className="py-12 bg-[#EDE0DC] dark:bg-[#261219] text-[#734652] dark:text-[#D9C5CE] text-xs transition-colors">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
         
-        <div className="flex items-center gap-2">
-          <span className="text-[#3A1E26] dark:text-[#FDF7F5] font-semibold">{personalInfo.name}</span>
-          <span>•</span>
-          <span>© {new Date().getFullYear()} All rights reserved</span>
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-3 text-center sm:text-left">
+          <span className="font-bold text-[#3A1E26] dark:text-[#FDF7F5]">{personalInfo.name}</span>
+          <span className="hidden sm:inline">•</span>
+          <span>Full-Stack & AI Systems Builder</span>
+          <span className="hidden sm:inline">•</span>
+          <span>Philippines</span>
         </div>
 
-        <div className="flex items-center gap-4 text-[#734652] dark:text-[#D9C5CE]">
+        <div className="flex items-center gap-6 text-[#734652] dark:text-[#D9C5CE]">
           <a
             href={personalInfo.github}
             target="_blank"
@@ -25,16 +27,16 @@ export default function Footer() {
             className="hover:text-[#BF5670] transition-colors flex items-center gap-1.5"
           >
             <Github className="w-3.5 h-3.5 text-[#BF5670]" />
-            <span>GitHub</span>
+            <span>github.com/{personalInfo.handle}</span>
           </a>
 
           <button
             onClick={scrollToTop}
-            className="hover:text-[#BF5670] transition-colors flex items-center gap-1 p-1"
+            className="hover:text-[#BF5670] transition-colors flex items-center gap-1.5 p-1"
             aria-label="Back to top"
           >
-            <span>Back to top</span>
-            <ArrowUp className="w-3 h-3" />
+            <span>Top</span>
+            <ArrowUp className="w-3.5 h-3.5" />
           </button>
         </div>
 

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Mail, Github, Send, Copy, Check, MessageSquare } from 'lucide-react';
+import { Copy, Check, ArrowUpRight } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
-  const [sent, setSent] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [sent, setSent] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personalInfo.email);
@@ -24,50 +24,41 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 border-t border-[#D9BBAF] dark:border-[#734652] bg-[#EDE0DC]/40 dark:bg-[#261219]/60 relative">
+    <section id="contact" className="py-24 border-t border-[#D9BBAF] dark:border-[#734652] bg-[#EDE0DC]/40 dark:bg-[#261219]/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
-          {/* Left Column: Direct Info */}
+          {/* Left Column: Direct Inquiries */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-[#BF5670] dark:text-[#D9B0C3] font-semibold">
-              <MessageSquare className="w-3.5 h-3.5" />
-              <span>Get In Touch</span>
-            </div>
-
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3A1E26] dark:text-[#FDF7F5]">
-              Let's build something remarkable together.
+              Let's build something durable together.
             </h2>
 
-            <p className="text-[#5C3340] dark:text-[#D9C5CE] text-sm leading-relaxed">
-              Have an opening, an interesting project, or want to discuss full-stack & AI solutions? Reach out directly—I am always open to meaningful collaborations.
+            <p className="text-sm sm:text-base text-[#5C3340] dark:text-[#D9C5CE] leading-relaxed">
+              Whether you are looking to hire a dedicated full-stack developer, integrate AI vision models into your product, or collaborate on specialized open-source tools, I welcome thoughtful conversations.
             </p>
 
-            {/* Quick Contact Cards */}
+            {/* Direct Channels */}
             <div className="space-y-3 pt-2">
-              {/* Email Card with Copy Button */}
-              <div className="p-4 rounded-xl bg-[#FAF3F1] dark:bg-[#43222C] border-2 border-[#D9BBAF] dark:border-[#734652] flex items-center justify-between gap-3 shadow-sm">
-                <div className="flex items-center gap-3 overflow-hidden">
-                  <div className="p-2.5 rounded-lg bg-[#BF5670]/15 dark:bg-[#BF5670]/30 text-[#BF5670] shrink-0 border border-[#BF5670]/40">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <div className="truncate">
-                    <div className="text-[11px] font-mono text-[#734652] dark:text-[#D9BBAF]">Direct Email</div>
-                    <div className="text-xs font-mono text-[#3A1E26] dark:text-[#FDF7F5] font-semibold truncate">
-                      {personalInfo.email}
-                    </div>
+              
+              {/* Email Card */}
+              <div className="p-4 rounded-xl bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] flex items-center justify-between gap-3">
+                <div className="truncate">
+                  <div className="text-[11px] text-[#734652] dark:text-[#D9BBAF]">Direct Email</div>
+                  <div className="text-xs sm:text-sm text-[#3A1E26] dark:text-[#FDF7F5] font-semibold truncate">
+                    {personalInfo.email}
                   </div>
                 </div>
                 <button
                   onClick={handleCopyEmail}
-                  className="px-3 py-1.5 rounded-lg bg-[#F5E9E5] hover:bg-[#EDE0DC] border border-[#D9BBAF] dark:bg-[#341A23] dark:hover:bg-[#3f202b] dark:border-[#734652] text-[#3A1E26] dark:text-[#FDF7F5] text-xs font-mono flex items-center gap-1.5 transition-colors shrink-0"
+                  className="px-3 py-1.5 rounded-lg bg-[#EDE0DC] hover:bg-[#D9BBAF]/50 dark:bg-[#341A23] dark:hover:bg-[#43222C] text-[#3A1E26] dark:text-[#FDF7F5] text-xs flex items-center gap-1.5 transition-colors shrink-0"
                   aria-label="Copy email address"
                 >
                   {copied ? (
                     <>
                       <Check className="w-3.5 h-3.5 text-[#BF5670] dark:text-[#D9B0C3]" />
-                      <span className="text-[#BF5670] dark:text-[#D9B0C3] font-bold">Copied!</span>
+                      <span className="text-[#BF5670] dark:text-[#D9B0C3] font-bold">Copied</span>
                     </>
                   ) : (
                     <>
@@ -83,97 +74,96 @@ export default function Contact() {
                 href={personalInfo.github}
                 target="_blank"
                 rel="noreferrer"
-                className="p-4 rounded-xl bg-[#FAF3F1] dark:bg-[#43222C] border-2 border-[#D9BBAF] dark:border-[#734652] hover:border-[#BF5670] flex items-center justify-between gap-3 group transition-all shadow-sm"
+                className="p-4 rounded-xl bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] hover:border-[#BF5670] flex items-center justify-between gap-3 group transition-colors"
               >
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-[#BF5670]/15 dark:bg-[#BF5670]/30 text-[#BF5670] border border-[#BF5670]/40">
-                    <Github className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="text-[11px] font-mono text-[#734652] dark:text-[#D9BBAF]">GitHub Profile</div>
-                    <div className="text-xs font-mono text-[#3A1E26] dark:text-[#FDF7F5] font-semibold">
-                      github.com/{personalInfo.handle}
-                    </div>
+                <div>
+                  <div className="text-[11px] text-[#734652] dark:text-[#D9BBAF]">GitHub Profile</div>
+                  <div className="text-xs sm:text-sm text-[#3A1E26] dark:text-[#FDF7F5] font-semibold">
+                    github.com/{personalInfo.handle}
                   </div>
                 </div>
-                <span className="text-xs font-mono text-[#BF5670] dark:text-[#D9B0C3] font-semibold group-hover:translate-x-0.5 duration-200">
-                  Visit ↗
+                <span className="text-xs text-[#BF5670] dark:text-[#D9B0C3] font-semibold flex items-center gap-1">
+                  <span>Visit</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
                 </span>
               </a>
-            </div>
 
+            </div>
           </div>
 
-          {/* Right Column: Interactive Form */}
+          {/* Right Column: Direct Dispatch Form */}
           <div className="lg:col-span-7">
-            <div className="p-7 rounded-2xl bg-[#FAF3F1] dark:bg-[#43222C] border-2 border-[#D9BBAF] dark:border-[#734652] shadow-xl">
-              <h3 className="text-lg font-bold text-[#3A1E26] dark:text-[#FDF7F5] mb-2">
-                Send a Direct Note
+            <div className="rounded-2xl bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] p-6 sm:p-8">
+              <h3 className="text-xl font-bold text-[#3A1E26] dark:text-[#FDF7F5] mb-2">
+                Send a Message
               </h3>
-              <p className="text-xs text-[#734652] dark:text-[#D9C5CE] mb-6">
-                Fill in the details below to start the conversation directly.
+              <p className="text-xs sm:text-sm text-[#734652] dark:text-[#D9C5CE] mb-6">
+                Direct transmission via local mail handler.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-mono text-[#734652] dark:text-[#D9BBAF] mb-1.5 font-medium">
+                    <label className="block text-xs text-[#734652] dark:text-[#D9BBAF] mb-1.5" htmlFor="contact-name">
                       Your Name
                     </label>
                     <input
+                      id="contact-name"
                       type="text"
                       required
-                      placeholder="Jane Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#F5E9E5] dark:bg-[#341A23] border border-[#D9BBAF] dark:border-[#734652] text-[#3A1E26] dark:text-[#FDF7F5] text-sm focus:outline-none focus:border-[#BF5670] transition-colors"
+                      placeholder="e.g. Alex Morgan"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#EDE0DC]/60 dark:bg-[#341A23] border border-[#D9BBAF]/80 dark:border-[#734652] text-sm text-[#3A1E26] dark:text-[#FDF7F5] placeholder-[#734652]/50 dark:placeholder-[#D9BBAF]/40 focus:outline-none focus:border-[#BF5670] transition-colors"
                     />
                   </div>
+
                   <div>
-                    <label className="block text-xs font-mono text-[#734652] dark:text-[#D9BBAF] mb-1.5 font-medium">
+                    <label className="block text-xs text-[#734652] dark:text-[#D9BBAF] mb-1.5" htmlFor="contact-email">
                       Your Email
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       required
-                      placeholder="jane@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#F5E9E5] dark:bg-[#341A23] border border-[#D9BBAF] dark:border-[#734652] text-[#3A1E26] dark:text-[#FDF7F5] text-sm focus:outline-none focus:border-[#BF5670] transition-colors"
+                      placeholder="alex@domain.com"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#EDE0DC]/60 dark:bg-[#341A23] border border-[#D9BBAF]/80 dark:border-[#734652] text-sm text-[#3A1E26] dark:text-[#FDF7F5] placeholder-[#734652]/50 dark:placeholder-[#D9BBAF]/40 focus:outline-none focus:border-[#BF5670] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-[#734652] dark:text-[#D9BBAF] mb-1.5 font-medium">
-                    Message
+                  <label className="block text-xs text-[#734652] dark:text-[#D9BBAF] mb-1.5" htmlFor="contact-message">
+                    Project Brief or Message
                   </label>
                   <textarea
-                    rows={4}
+                    id="contact-message"
                     required
-                    placeholder="Tell me about your project, idea, or opportunity..."
+                    rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#F5E9E5] dark:bg-[#341A23] border border-[#D9BBAF] dark:border-[#734652] text-[#3A1E26] dark:text-[#FDF7F5] text-sm focus:outline-none focus:border-[#BF5670] transition-colors resize-none"
+                    placeholder="Describe your project, timeline, or engineering opportunity..."
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#EDE0DC]/60 dark:bg-[#341A23] border border-[#D9BBAF]/80 dark:border-[#734652] text-sm text-[#3A1E26] dark:text-[#FDF7F5] placeholder-[#734652]/50 dark:placeholder-[#D9BBAF]/40 focus:outline-none focus:border-[#BF5670] transition-colors resize-none"
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full py-3.5 rounded-xl bg-[#BF5670] hover:bg-[#a8445e] text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-[#BF5670]/30 active:scale-[0.99]"
-                >
-                  {sent ? (
-                    <>
+                <div className="pt-2 flex items-center justify-between">
+                  <button
+                    type="submit"
+                    className="px-6 py-3 rounded-xl bg-[#BF5670] hover:bg-[#a8445e] text-white font-medium text-xs sm:text-sm tracking-wide transition-colors active:scale-95"
+                  >
+                    Transmit Message
+                  </button>
+
+                  {sent && (
+                    <span className="text-xs text-[#BF5670] dark:text-[#D9B0C3] flex items-center gap-1.5">
                       <Check className="w-4 h-4" />
-                      <span>Opening Mail Client...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      <span>Send Message</span>
-                    </>
+                      <span>Mail client dispatched</span>
+                    </span>
                   )}
-                </button>
+                </div>
               </form>
             </div>
           </div>

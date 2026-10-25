@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
+import { Github, Menu, X, Sun, Moon } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 
@@ -17,55 +17,57 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Featured Work', href: '#projects' },
-    { name: 'Technical Skills', href: '#skills' },
+    { name: 'Selected Work', href: '#projects' },
+    { name: 'Architecture', href: '#architecture' },
+    { name: 'Capabilities', href: '#skills' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
       scrolled 
-        ? 'bg-[#F5E9E5]/95 dark:bg-[#2F171F]/95 backdrop-blur-md border-b border-[#D9BBAF] dark:border-[#734652] shadow-md shadow-[#734652]/10 dark:shadow-black/40 py-3.5' 
+        ? 'bg-[#F5E9E5]/95 dark:bg-[#2F171F]/95 border-b border-[#D9BBAF] dark:border-[#734652] py-3' 
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+        
         {/* Brand / Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
           <img
             src={personalInfo.avatar}
             alt={personalInfo.name}
-            className="w-9 h-9 rounded-lg object-cover object-[center_20%] border-2 border-[#BF5670] shadow-sm group-hover:scale-105 transition-all"
+            className="w-8 h-8 rounded-lg object-cover object-[center_20%] border border-[#D9BBAF] dark:border-[#734652] group-hover:border-[#BF5670] transition-colors"
           />
           <div className="flex flex-col">
-            <span className="font-semibold text-sm tracking-tight text-[#3A1E26] dark:text-[#FDF7F5] group-hover:text-[#BF5670] dark:group-hover:text-[#D9B0C3] transition-colors">
+            <span className="font-bold text-sm tracking-tight text-[#3A1E26] dark:text-[#FDF7F5] group-hover:text-[#BF5670] transition-colors">
               {personalInfo.name}
             </span>
-            <span className="text-[11px] font-mono text-[#734652] dark:text-[#D9BBAF]">
+            <span className="text-[11px] text-[#734652] dark:text-[#D9BBAF]">
               @{personalInfo.handle}
             </span>
           </div>
         </a>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-7">
-          <div className="flex items-center gap-6 text-sm font-medium text-[#734652] dark:text-[#D9C5CE]">
+          <div className="flex items-center gap-6 text-xs sm:text-sm font-medium text-[#734652] dark:text-[#D9C5CE]">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-[#BF5670] dark:hover:text-[#D9B0C3] transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-[#BF5670] after:absolute after:bottom-0 after:left-0 after:transition-all after:duration-300"
+                className="hover:text-[#BF5670] dark:hover:text-[#D9B0C3] transition-colors py-1"
               >
                 {link.name}
               </a>
             ))}
           </div>
 
-          <div className="flex items-center gap-2.5 pl-4 border-l border-[#D9BBAF] dark:border-[#734652]">
-            {/* Theme Toggle Button */}
+          <div className="flex items-center gap-3 pl-4 border-l border-[#D9BBAF] dark:border-[#734652]">
+            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] hover:border-[#BF5670] text-[#734652] dark:text-[#D9B0C3] hover:text-[#BF5670] transition-all shadow-sm"
+              className="p-2 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] hover:border-[#BF5670] text-[#734652] dark:text-[#D9B0C3] transition-colors"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
@@ -76,98 +78,86 @@ export default function Navbar() {
               )}
             </button>
 
-            {/* GitHub Button */}
+            {/* GitHub */}
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] hover:border-[#BF5670] text-xs font-mono text-[#3A1E26] dark:text-[#FDF7F5] transition-all hover:text-[#BF5670] shadow-sm"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] hover:border-[#BF5670] text-xs text-[#3A1E26] dark:text-[#FDF7F5] transition-colors"
             >
               <Github className="w-3.5 h-3.5 text-[#BF5670]" />
               <span>GitHub</span>
-              <ArrowUpRight className="w-3 h-3 text-[#734652] dark:text-[#D9BBAF]" />
             </a>
 
-            {/* CTA */}
+            {/* Contact CTA */}
             <a
               href="#contact"
-              className="px-3.5 py-1.5 rounded-lg bg-[#BF5670] hover:bg-[#a8445e] text-white text-xs font-semibold tracking-wide transition-all shadow-md shadow-[#BF5670]/30 hover:shadow-[#BF5670]/50"
+              className="px-3.5 py-1.5 rounded-lg bg-[#BF5670] hover:bg-[#a8445e] text-white text-xs font-medium tracking-wide transition-colors active:scale-95"
             >
-              Let's Talk
+              Contact
             </a>
           </div>
         </nav>
 
-        {/* Mobile Nav Actions */}
+        {/* Mobile Menu & Theme Toggle */}
         <div className="flex items-center gap-2 md:hidden">
           <button
             onClick={toggleTheme}
             className="p-2 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] text-[#734652] dark:text-[#D9B0C3]"
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? <Sun className="w-4 h-4 text-[#D9B0C3]" /> : <Moon className="w-4 h-4 text-[#734652]" />}
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
-          <a
-            href={personalInfo.github}
-            target="_blank"
-            rel="noreferrer"
-            className="p-2 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] text-[#734652] dark:text-[#FDF7F5]"
-            aria-label="GitHub Profile"
-          >
-            <Github className="w-4 h-4 text-[#BF5670]" />
-          </a>
+
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] text-[#734652] dark:text-[#FDF7F5] focus:outline-none"
-            aria-label="Toggle navigation menu"
+            className="p-2 rounded-lg bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] text-[#3A1E26] dark:text-[#FDF7F5]"
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
+
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#FAF3F1] dark:bg-[#381B24] border-b border-[#D9BBAF] dark:border-[#734652] px-6 py-6 space-y-4 shadow-xl">
-          <div className="flex flex-col space-y-3">
+        <div className="md:hidden border-b border-[#D9BBAF] dark:border-[#734652] bg-[#FAF3F1] dark:bg-[#43222C] px-4 py-5 space-y-4">
+          <div className="flex flex-col space-y-3 font-medium text-sm">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-[#3A1E26] dark:text-[#FDF7F5] hover:text-[#BF5670] font-medium py-1 transition-colors"
+                className="text-[#3A1E26] dark:text-[#FDF7F5] hover:text-[#BF5670] py-1"
               >
                 {link.name}
               </a>
             ))}
           </div>
-          <div className="pt-4 border-t border-[#D9BBAF] dark:border-[#734652] flex flex-col gap-3">
-            <button
-              onClick={() => toggleTheme()}
-              className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-[#F5E9E5] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] text-sm font-medium text-[#3A1E26] dark:text-[#FDF7F5]"
-            >
-              {theme === 'dark' ? <Sun className="w-4 h-4 text-[#D9B0C3]" /> : <Moon className="w-4 h-4 text-[#734652]" />}
-              <span>{theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
-            </button>
+
+          <div className="pt-4 border-t border-[#D9BBAF]/50 dark:border-[#734652]/60 flex items-center justify-between">
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-[#F5E9E5] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] text-sm font-mono text-[#3A1E26] dark:text-[#FDF7F5]"
+              className="flex items-center gap-1.5 text-xs text-[#734652] dark:text-[#D9C5CE]"
             >
-              <Github className="w-4 h-4 text-[#BF5670]" />
-              <span>github.com/{personalInfo.handle}</span>
+              <Github className="w-3.5 h-3.5 text-[#BF5670]" />
+              <span>@{personalInfo.handle}</span>
             </a>
+
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center py-2.5 rounded-lg bg-[#BF5670] text-white font-semibold text-sm shadow-md shadow-[#BF5670]/30"
+              className="px-4 py-2 rounded-lg bg-[#BF5670] text-white text-xs font-medium"
             >
-              Get in Touch
+              Contact Me
             </a>
           </div>
         </div>
       )}
+
     </header>
   );
 }
