@@ -9,23 +9,67 @@ export const brandPalette = [
 export const personalInfo = {
   name: "Lauren Mae Espinar",
   handle: "superwowers",
-  title: "Full-Stack Developer & AI Systems Builder",
-  headline: "Engineering resilient web platforms, computer vision pipelines, and localized tools.",
-  bio: "Software engineer specializing in intuitive client-side applications, real-time computer vision pipelines, and resilient backend architectures. Experienced in bridging research-grade algorithms with practical, production-ready interfaces.",
+  title: "Full-Stack Developer & Systems Architect",
+  headline: "Engineering resilient enterprise LMS platforms, distributed web architectures, and computer vision systems.",
+  bio: "Software engineer and systems builder specializing in enterprise full-stack web platforms, multi-tenant learning management systems, cryptographic role architectures, and real-time computer vision. Dedicated to building reliable, high-utility digital infrastructure.",
   status: "Available for engineering roles & technical collaborations",
   location: "Philippines",
   github: "https://github.com/superwowers",
   email: "lrnmspnr@gmail.com",
   avatar: "/profile.jpg",
   summaryStats: [
-    { label: "Landmark Points", value: "33-pt", detail: "Real-time 3D pose estimation" },
-    { label: "Core Stack", value: "React 19 + FastAPI", detail: "End-to-end full stack" },
-    { label: "Deployment", value: "Docker & Local-First", detail: "Zero-latency reliability" },
-    { label: "Code Quality", value: "Vitest Tested", detail: "Automated regression suites" }
+    { label: "Flagship Architecture", value: "ACES LMS", detail: "Multi-tenant academic platform" },
+    { label: "Access Security", value: "4-Tier RBAC", detail: "Cryptographic JWT RS256" },
+    { label: "Core Full-Stack", value: "React 19 + Node", detail: "Concurrent optimistic UI" },
+    { label: "Verification", value: "Vitest Tested", detail: "Automated regression suites" }
   ]
 };
 
 export const interactiveSystems = [
+  {
+    id: "aces",
+    name: "ACES LMS Enterprise Gateway",
+    domain: "Academic Platform & Cryptographic RBAC",
+    project: "ACES LMS",
+    metricLabel: "Auth Handshake",
+    metricValue: "3.2ms",
+    accuracy: "100% Policy Isolation",
+    summary: "Multi-tenant institutional academic and learning management platform with cryptographically verified role-based access control, grade book ledgers, and concurrent state hydration.",
+    nodes: [
+      {
+        step: "Handshake",
+        name: "Cryptographic Bearer Token Handshake",
+        tech: "JWT / RS256",
+        description: "Validates incoming bearer token signatures against rotating public keys with sub-5ms cryptographic verification.",
+        status: "Verified 3.2ms",
+        payload: { alg: "RS256", issuer: "aces.lms.auth", ttl: "3600s", scope: ["academic:read", "grades:write", "portal:admin"] }
+      },
+      {
+        step: "Policy",
+        name: "Hierarchical RBAC Permission Evaluator",
+        tech: "Express Middleware",
+        description: "Evaluates multi-role access control distinguishing Administrator, Department Chair, Faculty, Registrar, and Student clearance tiers.",
+        status: "Authorized",
+        payload: { role: "Administrator", clearanceTier: "Level-4", multiTenant: true, institutionId: "inst_aces_0411", auditLogging: true }
+      },
+      {
+        step: "Query",
+        name: "Scoped Relational Query & Ledger",
+        tech: "Node.js / Relational SQL",
+        description: "Executes parameterized transactional operations with row-level tenant security, grade calculation auditing, and indexed joins.",
+        status: "Queried 4.8ms",
+        payload: { queryPlan: "Index Scan (tenant_id, course_id, student_id)", rowsAffected: 184, transactionSafe: true, cacheHit: true }
+      },
+      {
+        step: "Sync",
+        name: "Optimistic UI State Hydration",
+        tech: "React 19 Concurrent",
+        description: "Flushes state mutations through React 19 concurrent optimistic transitions, eliminating layout freeze during high-concurrency grading periods.",
+        status: "Hydrated",
+        payload: { renderPhase: "Optimistic", rollbackSafeguard: "Active", layoutShiftScore: 0.00, frameRate: "60fps" }
+      }
+    ]
+  },
   {
     id: "fitwise",
     name: "FitWise Vision Engine",
@@ -67,50 +111,6 @@ export const interactiveSystems = [
         description: "Morphs parametric 3D mannequin vertex buffers to mirror extracted dimensions with real-time zone-by-zone ease heatmaps.",
         status: "Rendered 60fps",
         payload: { vertexCount: 14820, meshBones: 24, easeMap: "Heatmap-Graduated", blendTime: "4ms" }
-      }
-    ]
-  },
-  {
-    id: "aces",
-    name: "ACES Enterprise RBAC Gateway",
-    domain: "Full-Stack Security & API Architecture",
-    project: "ACES Portal",
-    metricLabel: "Auth Handshake",
-    metricValue: "3.2ms",
-    accuracy: "100% Policy Isolation",
-    summary: "Multi-tenant academic and institutional management system with cryptographically verified role-based access control.",
-    nodes: [
-      {
-        step: "Handshake",
-        name: "Bearer Token Handshake",
-        tech: "JWT / RS256",
-        description: "Validates incoming cryptographic token signatures against rotating public keys with millisecond latency.",
-        status: "Verified",
-        payload: { alg: "RS256", issuer: "aces.auth", ttl: "3600s", scope: ["read:portal", "write:records"] }
-      },
-      {
-        step: "Policy",
-        name: "Role Permission Evaluator",
-        tech: "Express Middleware",
-        description: "Executes hierarchical access policies distinguishing Administrator, Faculty, Student, and Registrar privileges.",
-        status: "Authorized",
-        payload: { role: "Administrator", clearance: "Level-3", auditLogging: true, tenantId: "inst_0411" }
-      },
-      {
-        step: "Query",
-        name: "Scoped Relational Query",
-        tech: "Node.js / SQL",
-        description: "Runs parameterized relational transactions with row-level tenant security and indexed joins.",
-        status: "Queried 4.8ms",
-        payload: { queryPlan: "Index Scan (tenant_id, record_id)", rowsAffected: 124, cacheHit: true }
-      },
-      {
-        step: "Sync",
-        name: "Optimistic UI Transition",
-        tech: "React 19 Concurrent",
-        description: "Flushes state updates through React 19 optimistic actions, preventing interface layout jank during network transit.",
-        status: "Hydrated",
-        payload: { renderPhase: "Optimistic", rollbackSafeguard: "Active", layoutShiftScore: 0.00 }
       }
     ]
   },
@@ -162,6 +162,40 @@ export const interactiveSystems = [
 
 export const skillsMatrix = [
   {
+    category: "Enterprise Full-Stack & LMS Architecture",
+    description: "Multi-tenant academic portals, cryptographic access control, concurrent state synchronization, and scalable REST services.",
+    skills: [
+      {
+        name: "React 19 & Concurrent State Architecture",
+        level: "Primary Stack",
+        scope: "Client Architecture",
+        provenance: "ACES LMS (Primary Flagship)",
+        detail: "Engineered multi-role institutional dashboards utilizing React 19 concurrent features and optimistic updates for instant grade inputs."
+      },
+      {
+        name: "Node.js & Express Architecture",
+        level: "Primary Stack",
+        scope: "Backend Services",
+        provenance: "ACES LMS Backend",
+        detail: "Modular REST API controllers, policy middleware chains, transaction wrappers, and centralized error boundaries."
+      },
+      {
+        name: "Cryptographic JWT & Multi-Tier RBAC",
+        level: "Production Core",
+        scope: "Security Architecture",
+        provenance: "ACES LMS Security",
+        detail: "Hierarchical permissions matrix securing Administrator, Faculty, Registrar, and Student clearance tiers with RS256 tokens."
+      },
+      {
+        name: "Relational Schema & Transaction Modeling",
+        level: "Production Core",
+        scope: "Data Persistence",
+        provenance: "ACES LMS Database",
+        detail: "Normalized schemas for course enrollments, grade audit ledgers, attendance records, and composite indexed queries."
+      }
+    ]
+  },
+  {
     category: "AI, Vision & 3D Graphics",
     description: "Real-time computer vision models, geometric coordinate transformations, and parametric 3D rendering.",
     skills: [
@@ -196,21 +230,14 @@ export const skillsMatrix = [
     ]
   },
   {
-    category: "Frontend Architecture & Modern Web",
+    category: "Frontend Design Systems & Client Engineering",
     description: "Component hierarchies, reactive state patterns, fluid typography, and sub-second user interfaces.",
     skills: [
-      {
-        name: "React 19 & Component Architecture",
-        level: "Primary Stack",
-        scope: "Client Systems",
-        provenance: "FitWise, ACES, Sari-Sari",
-        detail: "Concurrent rendering, optimistic UI state mutations, custom hooks, and reliable component lifecycles."
-      },
       {
         name: "Tailwind CSS & Design Systems",
         level: "Primary Stack",
         scope: "Visual Engineering",
-        provenance: "All Systems",
+        provenance: "ACES LMS & All Systems",
         detail: "Tokenized design scales, custom fluid typography, responsive layout engines, and dark/light token persistence."
       },
       {
@@ -224,35 +251,42 @@ export const skillsMatrix = [
         name: "Semantic HTML5 & Accessibility (A11y)",
         level: "Production Core",
         scope: "Web Standards",
-        provenance: "ACES Portal",
-        detail: "Accessible landmarks, ARIA live regions, focus management, and keyboard navigation."
+        provenance: "ACES LMS Dashboards",
+        detail: "Accessible table ledgers, ARIA live regions, focus management, and keyboard-driven navigation."
+      },
+      {
+        name: "Local-First / Offline Architecture",
+        level: "Specialized Core",
+        scope: "Distributed Client",
+        provenance: "Sari-Sari Store POS",
+        detail: "IndexedDB client transactions, optimistic write-ahead logs, and asynchronous cloud sync mechanisms."
       }
     ]
   },
   {
-    category: "Backend Systems, Security & Databases",
-    description: "Resilient server architectures, cryptographic session integrity, and relational data modeling.",
+    category: "Reliability, Testing & DevOps",
+    description: "Automated regression guarantees, containerization, and reproducible environments.",
     skills: [
       {
-        name: "Node.js & Express Architecture",
+        name: "Automated Testing (Vitest & Playwright)",
+        level: "Production Core",
+        scope: "Quality Assurance",
+        provenance: "ACES LMS Test Suites",
+        detail: "Comprehensive test coverage across role authorization guards, API endpoint contracts, and end-to-end user workflows."
+      },
+      {
+        name: "Docker Containerization",
+        level: "Production Core",
+        scope: "Infrastructure",
+        provenance: "ACES & FitWise",
+        detail: "Multi-stage builds, isolated runtime environments, microservice orchestration, and reproducible images."
+      },
+      {
+        name: "Git & Collaborative Workflows",
         level: "Primary Stack",
-        scope: "Backend Services",
-        provenance: "ACES Portal",
-        detail: "Modular controllers, middleware pipelines, error-boundary handlers, and scalable routing architectures."
-      },
-      {
-        name: "JWT & Role-Based Access (RBAC)",
-        level: "Production Core",
-        scope: "Security",
-        provenance: "ACES Portal",
-        detail: "Hierarchical permissions matrices, cryptographic signing, route guard interceptors, and session expiration."
-      },
-      {
-        name: "SQL & Relational Schema Design",
-        level: "Production Core",
-        scope: "Data Persistence",
-        provenance: "ACES Portal",
-        detail: "Normalized table relationships, indexed foreign constraints, transaction safety, and query optimization."
+        scope: "Version Control",
+        provenance: "GitHub @superwowers",
+        detail: "Atomic commits, pull request reviews, semantic release tagging, and branch lifecycle management."
       },
       {
         name: "RESTful API Specification",
@@ -262,72 +296,63 @@ export const skillsMatrix = [
         detail: "Strict HTTP semantics, standardized payload schemas, status codes, and backward-compatible versioning."
       }
     ]
-  },
-  {
-    category: "Reliability, Tooling & DevOps",
-    description: "Automated regression guarantees, containerization, and local-first data persistence.",
-    skills: [
-      {
-        name: "Local-First / Offline Architecture",
-        level: "Specialized Core",
-        scope: "Distributed Client",
-        provenance: "Sari-Sari Store POS",
-        detail: "IndexedDB client transactions, optimistic write-ahead logs, and asynchronous cloud sync mechanisms."
-      },
-      {
-        name: "Docker Containerization",
-        level: "Production Core",
-        scope: "Infrastructure",
-        provenance: "FitWise & ACES",
-        detail: "Multi-stage builds, isolated runtime environments, microservice orchestration, and reproducible images."
-      },
-      {
-        name: "Automated Testing (Vitest & Playwright)",
-        level: "Production Core",
-        scope: "Quality Assurance",
-        provenance: "ACES Portal",
-        detail: "Unit test coverage, integration suites, API response mocking, and end-to-end user journey validation."
-      },
-      {
-        name: "Git & Collaborative Workflows",
-        level: "Primary Stack",
-        scope: "Version Control",
-        provenance: "GitHub @superwowers",
-        detail: "Atomic commits, pull request reviews, semantic release tagging, and branch lifecycle management."
-      }
-    ]
   }
 ];
 
 export const engineeringPrinciples = [
   {
-    id: "sub-50ms",
-    title: "Sub-50ms Interaction Budgets",
-    statement: "No user should wait for layout calculations or network serialization.",
-    description: "Every interface is built with optimistic state mutations, immediate feedback states, and minimal client bundle overhead."
+    id: "defensive-boundaries",
+    title: "Cryptographic & Defensive Boundaries",
+    statement: "Never trust raw incoming payloads without strict structural and role validation.",
+    description: "Every institutional endpoint in ACES LMS validates authorization tokens, evaluates role clearance hierarchies, and sanitizes input data before execution."
   },
   {
-    id: "defensive-boundaries",
-    title: "Defensive Type & Schema Boundaries",
-    statement: "Never trust raw incoming payloads without strict structural validation.",
-    description: "Whether processing camera coordinate streams or enterprise authorization tokens, every input passes through schema barriers."
+    id: "sub-50ms",
+    title: "Sub-50ms Interaction Budgets",
+    statement: "No educator or student should wait for layout freezes or slow serialization.",
+    description: "Built with optimistic concurrent state mutations, instant UI feedback, and streamlined payload sizes to maintain smooth 60fps responsiveness."
   },
   {
     id: "offline-resilience",
-    title: "Local-First Resilience",
-    statement: "Software must remain functional even when connectivity fluctuates or fails.",
-    description: "Transactions commit to local persistence first, decoupling user actions from cloud availability constraints."
+    title: "Fault-Tolerant Reliability",
+    statement: "Critical operations must remain resilient and auditable under high load.",
+    description: "All transactions maintain audit-logged histories, data integrity safeguards, and graceful recovery routines."
   }
 ];
 
 export const projects = [
+  {
+    id: "aces",
+    title: "ACES LMS",
+    category: "Enterprise Full-Stack & LMS",
+    subtitle: "Enterprise Learning Management & Academic Operations System",
+    year: "2026",
+    role: "Lead Full-Stack Architect & Backend Engineer",
+    description: "The primary academic enterprise management and learning platform powering institutional course coordination, automated grading ledgers, student tracking, and multi-tier cryptographic role-based access control.",
+    tags: ["React 19", "Node.js", "Express", "Tailwind CSS", "REST API", "Lucide React", "Vitest", "Playwright"],
+    featured: true,
+    githubUrl: "https://github.com/superwowers/aces-backend",
+    stats: "4-Tier RBAC · 3.2ms Handshake · Concurrent Optimistic Sync",
+    metrics: [
+      { label: "Auth Validation", val: "3.2ms Handshake" },
+      { label: "Clearance Tiers", val: "4-Tier RBAC" },
+      { label: "Test Coverage", val: "Vitest + Playwright" },
+      { label: "Architecture", val: "Decoupled REST API" }
+    ],
+    highlights: [
+      "Modern React 19 architecture featuring concurrent optimistic UI state handling to prevent layout freezes during high-volume grading and attendance entries.",
+      "JWT-authenticated Express backend with structured relational models, row-level tenant security, and comprehensive input sanitation.",
+      "Cryptographic role-based authorization matrix strictly segregating permissions across Administrator, Faculty, Registrar, and Student personas.",
+      "Automated regression testing suites utilizing Vitest and Playwright ensuring rock-solid stability across all institutional workflows."
+    ]
+  },
   {
     id: "fitwise",
     title: "FitWise",
     category: "AI & Computer Vision",
     subtitle: "AI-Powered Virtual Fitting Room & Anthropometrics",
     year: "2026",
-    role: "Lead Full-Stack & Computer Vision Engineer",
+    role: "Full-Stack & Computer Vision Engineer",
     description: "An intelligent virtual sizing engine that estimates human body measurements from single-camera input using MediaPipe 33-point pose landmarking. Renders a parametric 3D mannequin in WebGL with real-time zone-by-zone ease comparisons.",
     tags: ["Python", "FastAPI", "MediaPipe", "WebGL", "React 19", "Tailwind CSS", "Docker"],
     featured: true,
@@ -343,30 +368,6 @@ export const projects = [
       "Custom landmark-to-anthropometric depth calculation algorithms mapping single-camera perspectives to realistic anatomical circumference.",
       "Real-time 3D WebGL mannequin projection anchored to calibrated user height, weight, and joint landmarks.",
       "FastAPI microservice backend containerized with Docker, serving real-time geometric calculation requests with high throughput."
-    ]
-  },
-  {
-    id: "aces",
-    title: "ACES Portal",
-    category: "Enterprise Full-Stack",
-    subtitle: "Comprehensive Academic & Enterprise Management Platform",
-    year: "2026",
-    role: "Full-Stack Backend & Architecture Engineer",
-    description: "A secure web portal integrating administrative dashboards, student tracking, and automated service coordination with responsive cryptographic role-based access control.",
-    tags: ["React 19", "Node.js", "Express", "Tailwind CSS", "REST API", "Lucide React", "Vitest"],
-    featured: true,
-    githubUrl: "https://github.com/superwowers/aces-backend",
-    stats: "Multi-Role RBAC · Cryptographic JWT · Zero-Drift Sync",
-    metrics: [
-      { label: "Auth Validation", val: "3.2ms Latency" },
-      { label: "Access Roles", val: "4-Tier RBAC" },
-      { label: "Test Coverage", val: "Vitest + Playwright" },
-      { label: "Architecture", val: "Decoupled REST" }
-    ],
-    highlights: [
-      "Modern React 19 architecture featuring concurrent optimistic UI state handling to prevent layout freezes.",
-      "JWT-authenticated Express backend with structured relational models, row-level tenant security, and input sanitation.",
-      "Automated regression testing suites utilizing Vitest and Playwright ensuring high reliability across role workflows."
     ]
   },
   {

@@ -3,7 +3,7 @@ import { Play, RotateCw, CheckCircle2, ChevronRight, Activity } from 'lucide-rea
 import { interactiveSystems } from '../data/portfolioData';
 
 export default function ArchitectureInspector() {
-  const [activeSystemId, setActiveSystemId] = useState('fitwise');
+  const [activeSystemId, setActiveSystemId] = useState('aces');
   const [selectedNodeIndex, setSelectedNodeIndex] = useState(0);
   const [simulating, setSimulating] = useState(false);
   const [simulationStep, setSimulationStep] = useState(0);
@@ -204,7 +204,7 @@ export default function ArchitectureInspector() {
                 <span className="text-[10px] text-[#BF5670]">JSON · Verified</span>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#2F171F] dark:bg-[#261219] border border-[#734652] text-[#FDF7F5] font-mono text-xs overflow-x-auto flex-1 flex flex-col justify-between">
+              <div className="p-4 rounded-xl bg-[#2F171F] dark:bg-[#261219] border border-[#734652] text-[#FDF7F5] text-xs overflow-x-auto flex-1 flex flex-col justify-between">
                 <pre className="text-[11px] leading-relaxed text-[#D9C5CE]">
                   <code>{JSON.stringify(currentNode.payload, null, 2)}</code>
                 </pre>

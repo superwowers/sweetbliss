@@ -29,7 +29,7 @@ export default function Hero() {
 
             {/* Supporting sentence directly below headline */}
             <p className="text-base sm:text-lg text-[#5C3340] dark:text-[#D9C5CE] leading-relaxed max-w-xl">
-              Building intuitive web applications, real-time computer vision pipelines with MediaPipe 33-point pose landmarking, and localized retail tools in the Philippines.
+              Architecting institutional academic management systems (ACES LMS), concurrent full-stack platforms with React 19 and Node.js, real-time computer vision pipelines, and localized retail tools.
             </p>
 
             {/* Primary Actions */}
@@ -38,7 +38,7 @@ export default function Hero() {
                 href="#projects"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#BF5670] hover:bg-[#a8445e] text-white font-medium text-sm transition-colors active:scale-95"
               >
-                <span>Selected Projects</span>
+                <span>Explore ACES LMS & Projects</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
@@ -115,8 +115,8 @@ export default function Hero() {
 
               {/* Technical summary footer */}
               <div className="p-4 bg-[#FAF3F1] dark:bg-[#43222C] border-t border-[#D9BBAF]/50 dark:border-[#734652]/50 flex items-center justify-between text-xs">
-                <span className="text-[#734652] dark:text-[#D9BBAF]">Core Engineering</span>
-                <span className="font-semibold text-[#3A1E26] dark:text-[#FDF7F5]">AI Vision · Full-Stack · Docker</span>
+                <span className="text-[#734652] dark:text-[#D9BBAF]">Flagship Focus</span>
+                <span className="font-semibold text-[#3A1E26] dark:text-[#FDF7F5]">ACES LMS · Enterprise Systems</span>
               </div>
 
             </div>

@@ -3,9 +3,9 @@ import { personalInfo } from '../data/portfolioData';
 
 export default function About() {
   const pillars = [
-    { title: "Computer Vision & Pose AI", desc: "MediaPipe 33-point body landmarking, spatial depth calculations, and biomechanical measurement extraction." },
+    { title: "Enterprise LMS & Security (ACES)", desc: "Multi-tenant role architectures, cryptographic JWT token authorization, and ACID-compliant relational ledgers." },
     { title: "Modern Reactive Frontends", desc: "React 19 concurrent architectures, optimistic state updates, accessible semantic layouts, and WebGL rendering." },
-    { title: "Resilient Backends & Security", desc: "Python/FastAPI microservices, Node.js REST architectures, cryptographic JWT token validation, and RBAC." },
+    { title: "Computer Vision & Pose AI", desc: "MediaPipe 33-point body landmarking, spatial depth calculations, and biomechanical measurement extraction." },
     { title: "Offline-First & Local Persistence", desc: "Sub-5ms client transactions via IndexedDB, conflict resolution engines, and containerized Docker environments." }
   ];
 
@@ -49,7 +49,7 @@ export default function About() {
                 </div>
                 <div className="flex justify-between items-center py-1.5 border-b border-[#D9BBAF]/50 dark:border-[#734652]/60">
                   <span className="text-[#734652] dark:text-[#D9BBAF]">Specialization</span>
-                  <span className="text-[#3A1E26] dark:text-[#FDF7F5] font-semibold">AI & Full-Stack</span>
+                  <span className="text-[#3A1E26] dark:text-[#FDF7F5] font-semibold">Enterprise LMS & Full-Stack</span>
                 </div>
                 <div className="flex justify-between items-center pt-1 text-[#734652] dark:text-[#D9BBAF]">
                   <span>Status</span>
@@ -69,10 +69,10 @@ export default function About() {
 
             <div className="space-y-4 text-[#5C3340] dark:text-[#D9C5CE] text-sm sm:text-base leading-relaxed">
               <p>
-                I am a full-stack developer and AI systems engineer based in the Philippines. My work is centered on building software that solves concrete, physical-world friction—whether that means extracting real-time anatomical body measurements from a laptop webcam or creating a zero-latency digital cash register for a neighborhood merchant.
+                I am a full-stack developer and systems architect based in the Philippines. My work is anchored by large-scale enterprise platforms like <strong>ACES LMS</strong>—an institutional learning and campus management system engineered with multi-tier role authorization, concurrent state hydration, and high-integrity grading ledgers.
               </p>
               <p>
-                In an era dominated by repetitive design templates and disconnected APIs, I focus on end-to-end craftsmanship: architecting responsive user interfaces with React 19 and Tailwind CSS, writing resilient Python and Node.js backend services, containerizing with Docker, and guaranteeing system reliability through automated testing.
+                From complex institutional portals to computer vision pipelines estimating 3D body pose in WebGL, and offline-first point-of-sale systems for local retail merchants, I focus on end-to-end craftsmanship: architecting responsive user interfaces with React 19 and Tailwind CSS, writing resilient Python and Node.js backend services, containerizing with Docker, and guaranteeing system reliability through automated testing.
               </p>
             </div>
 

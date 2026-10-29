@@ -5,14 +5,20 @@ import { projects } from '../data/portfolioData';
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'AI & Computer Vision', 'Enterprise Full-Stack', 'Distributed Web Apps', 'Brand & Web Systems'];
+  const categories = [
+    'All',
+    'Enterprise Full-Stack & LMS',
+    'AI & Computer Vision',
+    'Distributed Web Apps',
+    'Brand & Web Systems'
+  ];
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
     : projects.filter(p => p.category === selectedCategory);
 
-  const flagshipProject = projects.find(p => p.id === 'fitwise');
-  const secondaryProjects = filteredProjects.filter(p => selectedCategory !== 'All' ? true : p.id !== 'fitwise');
+  const flagshipProject = projects.find(p => p.id === 'aces') || projects[0];
+  const secondaryProjects = filteredProjects.filter(p => selectedCategory !== 'All' ? true : p.id !== 'aces');
 
   return (
     <section id="projects" className="py-24 border-t border-[#D9BBAF] dark:border-[#734652]">
@@ -22,10 +28,10 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#3A1E26] dark:text-[#FDF7F5]">
-              Selected Systems & Architectures
+              Featured Systems & Case Studies
             </h2>
             <p className="text-sm sm:text-base text-[#5C3340] dark:text-[#D9C5CE] mt-2 max-w-xl">
-              Production codebases addressing real human challenges through intelligent computer vision, enterprise role management, and local-first commerce.
+              Production architectures anchored by enterprise academic platforms, intelligent computer vision, and local-first distributed systems.
             </p>
           </div>
 
@@ -41,13 +47,13 @@ export default function Projects() {
                     : 'bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] text-[#734652] dark:text-[#D9C5CE] hover:text-[#BF5670]'
                 }`}
               >
-                {category}
+                {category === 'Enterprise Full-Stack & LMS' ? 'ACES LMS / Enterprise' : category}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Flagship Feature Case Study (FitWise) when 'All' is selected */}
+        {/* Primary Flagship Feature Case Study: ACES LMS */}
         {selectedCategory === 'All' && flagshipProject && (
           <div className="mb-12 rounded-2xl bg-[#FAF3F1] dark:bg-[#43222C] border border-[#D9BBAF] dark:border-[#734652] p-7 sm:p-9">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -55,7 +61,7 @@ export default function Projects() {
               <div className="lg:col-span-7 space-y-4">
                 <div className="flex items-center gap-3">
                   <span className="text-xs px-2.5 py-1 rounded bg-[#BF5670] text-white font-semibold">
-                    Flagship System
+                    Primary Flagship System
                   </span>
                   <span className="text-xs text-[#734652] dark:text-[#D9BBAF]">
                     {flagshipProject.category} · {flagshipProject.year}
@@ -97,7 +103,7 @@ export default function Projects() {
                     className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#BF5670] hover:bg-[#a8445e] text-white text-xs font-medium transition-colors ml-auto active:scale-95"
                   >
                     <Github className="w-4 h-4" />
-                    <span>View GitHub Source</span>
+                    <span>View GitHub Backend Source</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -106,8 +112,8 @@ export default function Projects() {
               {/* Right: Technical Spec Card */}
               <div className="lg:col-span-5 rounded-xl bg-[#EDE0DC] dark:bg-[#341A23] border border-[#D9BBAF]/80 dark:border-[#734652] p-6 space-y-5">
                 <div className="flex items-center justify-between pb-3 border-b border-[#D9BBAF]/60 dark:border-[#734652]/60 text-xs">
-                  <span className="font-bold text-[#3A1E26] dark:text-[#FDF7F5]">Telemetry Specifications</span>
-                  <span className="text-[#BF5670] dark:text-[#D9B0C3]">Real-time Loop</span>
+                  <span className="font-bold text-[#3A1E26] dark:text-[#FDF7F5]">Institutional Specifications</span>
+                  <span className="text-[#BF5670] dark:text-[#D9B0C3]">Production Ready</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -128,7 +134,7 @@ export default function Projects() {
                     href="#architecture"
                     className="text-xs text-[#BF5670] dark:text-[#D9B0C3] hover:underline flex items-center gap-1"
                   >
-                    <span>Inspect this pipeline in live simulator</span>
+                    <span>Inspect ACES LMS Auth & Query pipeline live</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
